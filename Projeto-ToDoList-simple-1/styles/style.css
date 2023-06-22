@@ -1,0 +1,145 @@
+:root {
+  --fonte-principal: "Lato", sans-serif;
+  --azul-escuro: #27374d;
+  --azul-medio: #526d82;
+  --azul-claro: #9db2bf;
+  --branco: #dde6ed;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background: linear-gradient(0, #27374d, #000000);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin-bottom: 100px;
+  flex-direction: column;
+  background-color: var(--branco);
+  align-items: center;
+  padding: 30px;
+  border-radius: 15px;
+  gap: 30px;
+}
+
+.bloco {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#input-task {
+  padding: 15px;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.btn-save {
+  width: 45px;
+  border-radius: 100%;
+  background-color: #9db2bf;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn-save:hover {
+  background-color: var(--azul-medio);
+}
+
+.btn-check,
+.btn-delete {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--azul-escuro);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-check:hover,
+.btn-delete:hover {
+  background-color: var(--azul-medio);
+}
+
+.btn-check i,
+.btn-delete i {
+  color: aliceblue;
+}
+
+#btn-save i {
+  color: aliceblue;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--azul-claro);
+  color: var(--azul-escuro);
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+}
+
+.task p,
+.task button {
+  margin: 0 22px;
+}
+
+.task-name {
+  text-transform: uppercase;
+}
+
+.btns {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+}
+
+.msg-error {
+  display: none;
+  background-color: rgb(255, 170, 170);
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  color: red;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.done {
+  background-color: #818181;
+  text-decoration: line-through;
+}
